@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recepcionistas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f2f4a3b-b78e-4b06-a784-66221cf4cf30">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from users3;]]>
+	</queryString>
+	<field name="iduser3" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="usuario3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emeil3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fone3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="login3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="senha3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rg3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hrdetrabalho3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="0" width="308" height="39" uuid="05827feb-f172-4af8-9730-569427dc8391"/>
+				<textElement>
+					<font fontName="Segoe UI" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Recepcionista]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="476" y="0" width="100" height="20" uuid="04733ebd-b871-49fb-b0e8-5bee5ec88277"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="65" height="20" uuid="4aecb487-a402-4173-8055-281dc1170b21"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[iduser3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="2" width="178" height="20" uuid="ee737ac7-e23f-4055-98d5-24d6083d6305"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[usuario3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="2" width="168" height="20" uuid="b7372612-0346-4e03-ac6e-9aa5af1bb32b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[emeil3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="2" width="86" height="20" uuid="18948f0e-0fd3-416e-a1c4-86c5a233f639"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[cpf3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="2" width="69" height="20" uuid="5f24990e-9525-4896-82ab-b372b13c9041"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[hrdetrabalho3]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="65" height="20" uuid="637650ee-5d58-4772-856e-c80f0492ea6b"/>
+				<textFieldExpression><![CDATA[$F{iduser3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="0" width="178" height="20" uuid="9ab8205c-1627-4121-9ed5-6b5b2036a695"/>
+				<textFieldExpression><![CDATA[$F{usuario3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="1" width="168" height="20" uuid="7498d8c9-b43c-426e-abe1-0c66a05472a4"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emeil3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="1" width="86" height="20" uuid="b885e63d-2166-4432-95ca-f90698e4eb70"/>
+				<textFieldExpression><![CDATA[$F{cpf3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="1" width="69" height="20" uuid="9416c5c1-6b24-48b3-b0b6-f50c5fdbbcad"/>
+				<textFieldExpression><![CDATA[$F{hrdetrabalho3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="42" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="14" splitType="Stretch"/>
+	</summary>
+</jasperReport>
